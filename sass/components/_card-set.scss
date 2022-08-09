@@ -5,6 +5,5 @@
 }
 
 .card-set-item {
-    @include flex-basis ($indent, 3);
     flex-basis: calc(100% - var(--indent) *(var(--items) - 1)) /var(--items);
 }

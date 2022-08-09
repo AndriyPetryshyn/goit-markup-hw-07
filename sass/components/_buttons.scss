@@ -1,34 +1,32 @@
 .btn__item {
-    cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  font-weight: 500;
+  text-align: center;
+  background-color: var(--backround-btncolor);
 
-    transition: color var(--animation), background-color var(--animation);
+  transition: background-color var(--animation), color var(--animation);
 
-}
+  cursor: pointer;
 
-.btn__item:hover,
-.btn__item:focus,
-.btn__item:active {
+  transition: color var(--animation), background-color var(--animation);
+
+  &:hover,
+  &:focus,
+  &:active {
     color: var(--main-color);
     background-color: var(--accent-color);
 
     transition: color var(--animation), background-color var(--animation);
-}
+  }
 
-.btn__item .current {
+  & .current {
     color: var(--main-color);
     background-color: var(--accent-color);
+  }
 }
 
-.btn__item {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.63;
-    font-weight: 500;
-    text-align: center;
-    background-color: var(--backround-btncolor);
-
-    transition: background-color var(--animation), color var(--animation);
-}
 .btn__list {
-    font-family: inherit;
+  font-family: inherit;
 }

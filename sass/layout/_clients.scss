@@ -1,12 +1,13 @@
-.clients__list {
+.clients {
+  @extend %section;
+
+  &__list {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
 
-    --items: 6;
-}
-
-.clients__title {
+  &__title {
     display: block;
 
     text-align: center;
@@ -14,21 +15,18 @@
     font-weight: 700;
     font-size: 36px;
     line-height: 1.14;
+  }
 
-}
-
-/* Clients-icon*/
-
-.clients__item {
+  &__item {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-basis: calc(100% - var(--indent) *(var(--items) - 1)) /var(--items);
+    flex-basis: calc(100% - var(--indent) * (var(--items) - 1)) / var(--items);
     width: 170px;
     height: 92px;
-}
+  }
 
-.clients__link {
+  &__link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,25 +36,25 @@
     border-radius: 4px;
 
     transition: border var(--animation);
+  }
 
-}
+  &__icon {
+    fill: #afb1b8;
 
-.clients__icon {
-    fill: #AFB1B8;
-
-    transition: fill var(--animation)
+    transition: fill var(--animation);
+  }
 }
 
 .clients__link:hover .clients__icon,
 .clients__link:focus .clients__icon {
-    fill: var(--accent-color);
+  fill: var(--accent-color);
 
-    transition: fill var(--animation);
+  transition: fill var(--animation);
 }
 
 .clients__link:hover,
 .clients__link:focus {
-    border: 1px solid rgba(33, 150, 243, 1);
+  border: 1px solid rgba(33, 150, 243, 1);
 
-    transition: border var(--animation);
+  transition: border var(--animation);
 }

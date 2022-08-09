@@ -1,51 +1,46 @@
 .footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: var(--bgc-col-dark);
-}
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--bgc-col-dark);
 
-.footer__accent {
+  &__accent {
     color: var(--accent-color);
-}
+  }
 
-.footer__link {
+  &__link {
     display: inline-block;
     margin-bottom: 20px;
 
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     color: var(--main-color);
-}
+  }
 
-.footer__address {
+  &__address {
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
     background-color: var(--bgc-col-dark);
-}
+  }
 
-.footer__list .footer__item:not(:last-child) {
-    margin-bottom: 9px;
-}
+  &__map {
+    color: var(--main-color);
+  }
 
-.footer__map {
-    color: var(--main-color)
-}
-
-.footer__contacts {
+  &__contacts {
     color: var(--secondary-address-color);
-}
-/* Footer icons */
-.footer__container {
+  }
+
+  &__container {
     display: flex;
     justify-content: center;
     align-items: baseline;
     gap: 70px;
-}
+  }
 
-.footer__title {
+  &__title {
     margin-bottom: 20px;
 
     text-transform: uppercase;
@@ -53,74 +48,23 @@
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 3%;
-}
+  }
 
-.footer__social {
+  &__social {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-}
+  }
 
-.footer__part {
+  &__part {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-
-}
-
-.footer__links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-
-    transition: background-color var(--animation);
-}
-
-.footer__icon {
-    fill: rgba(255, 255, 255, 0.1)
-}
-
-.footer__icon {
-    fill: var(--main-color);
-
-    transition: fill var(--animation);
-}
-
-.footer__links:hover,
-.footer__links:focus,
-.footer__links:active {
-    background-color: var(--accent-color);
-
-    transition: background-color var(--animation);
-}
-
-.footer__links:hover .footer__icon,
-.footer__links:focus .footer__icon {
-    fill: var(--main-color);
-    background-color: var(--accent-color);
-
-    transition: fill var(--animation), background-color var(--animation);
-}
-
-/* Footer Subscribe */
-.footer__input {
-    width: 358px;
-    height: 50px;
-
-    padding: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background: #2F303A;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-}
-
-.footer__btn {
+  }
+  
+  &__btn {
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -136,9 +80,9 @@
     border-radius: 4px;
 
     cursor: pointer;
-}
+  }
 
-.footer__text {
+  &__text {
     font-weight: 700;
     font-size: 16px;
     line-height: 30px;
@@ -149,9 +93,59 @@
     letter-spacing: 0.06em;
 
     color: var(--main-color);
+  }
+
+  &__icon {
+    fill: rgba(255, 255, 255, 0.1);
+    fill: var(--main-color);
+
+    transition: fill var(--animation);
+  }
 }
 
-.footer__input.placeholder {
+.footer__list .footer__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+
+  transition: background-color var(--animation);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--accent-color);
+
+    transition: background-color var(--animation);
+  }
+
+  &:hover .footer__icon,
+  &:focus .footer__icon {
+    fill: var(--main-color);
+    background-color: var(--accent-color);
+
+    transition: fill var(--animation), background-color var(--animation);
+  }
+}
+
+.footer__input {
+  width: 358px;
+  height: 50px;
+
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: #2f303a;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  &.placeholder {
     width: 47px;
     height: 20px;
 
@@ -163,7 +157,6 @@
     align-items: center;
     letter-spacing: 0.03em;
 
-
-
     color: rgba(255, 255, 255, 0.6);
+  }
 }

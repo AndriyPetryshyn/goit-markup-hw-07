@@ -1,8 +1,9 @@
-.register__form {
+.register {
+  &__form {
     text-align: center;
-}
+  }
 
-.register__title {
+  &__title {
     display: block;
     margin-bottom: 12px;
 
@@ -13,25 +14,23 @@
     letter-spacing: 0.03em;
 
     color: #212121;
-}
+  }
 
-.register__group {
+  &__group {
     margin-bottom: 20px;
-}
+  }
 
-.register__wrap {
+  &__wrap {
     position: relative;
     display: block;
     margin-bottom: 10px;
 
     &:last-child {
-    margin-bottom: 0;
-        }
-}
+      margin-bottom: 0;
+    }
+  }
 
-
-
-.register__label {
+  &__label {
     display: block;
     text-align: left;
 
@@ -41,104 +40,44 @@
     letter-spacing: 0.01em;
     color: #757575;
     margin-bottom: 4px;
-
-}
-
-.register__input,
-.register__message {
-    width: 448px;
-    height: 40px;
-
-
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    padding-top: 20px;
-    padding-left: 40px;
-    padding-bottom: 28px;
-    padding-right: 40px;
-
-    cursor: pointer;
-
-    outline: transparent;
-}
-
-.register__input:hover+.register__icon,
-.register__input:focus+.register__icon,
-.register__input:hover+.register__message,
-.register__input:focus+.register__message {
-    fill: var(--accent-color);
-
-    transition: fill var(--animation), background-color var(--animation);
-
-
-}
-
-.register__input:hover,
-.register__input:focus {
-    border-color: var(--accent-color);
-
-    transition: border-color var(--animation);
-}
-
-.register__message:hover,
-.register__message:focus {
-    border-color: var(--accent-color);
-
-    transition: border-color var(--animation);
-}
-
-.register__message {
-
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
-
-    padding: 12px 16px;
-    height: 90px;
-    resize: none;
-}
-
-.register__icon {
+  }
+  &__icon {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     bottom: 23px;
     left: 15px;
-}
+  }
 
-.register__svg {
+  &__svg {
     position: relative;
-}
+  }
 
-.register__agreement {
+  &__agreement {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 25px;
-}
+  }
+  &__uncheck {
+    .register__checkbox:checked + .register__icon & {
+      opacity: 0;
+      transition: opacity var(--animation);
+    }
+  }
 
-.register__uncheck{
-    .register__checkbox:checked+.register__icon & {
-        opacity: 0;
-        transition: opacity var(--animation);
-        }
-}
-
-.register__check {
+  &__check {
     opacity: 0;
 
     transition: opacity var(--animation);
 
-    .register__checkbox:checked+.register__icon & {
-            opacity: 1;
-        }
-}
+    .register__checkbox:checked + .register__icon & {
+      opacity: 1;
+    }
+  }
 
-
-
-.register__text {
+  &__text {
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
@@ -147,16 +86,15 @@
 
     user-select: none;
     text-underline-position: under;
-}
+  }
 
-.register__link {
+  &__link {
     color: var(--accent-color);
-}
+  }
 
-.register__btn {
+  &__btn {
     display: inline-flex;
     align-items: center;
-
 
     padding: 10px 25px;
 
@@ -171,11 +109,63 @@
     border-radius: 4px;
 
     cursor: pointer;
+  }
 }
+.register__message {
+  width: 448px;
+  height: 40px;
+
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+
+  padding: 12px 16px;
+  height: 90px;
+  resize: none;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-bottom: 28px;
+  padding-right: 40px;
+
+  cursor: pointer;
+
+  outline: transparent;
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+
+    transition: border-color var(--animation);
+  }
+}
+.register__input {
+  width: 448px;
+  height: 40px;
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+
+    transition: border-color var(--animation);
+  }
+}
+.register__input:hover + .register__icon,
+.register__input:focus + .register__icon,
+.register__input:hover + .register__message,
+.register__input:focus + .register__message {
+  fill: var(--accent-color);
+
+  transition: fill var(--animation), background-color var(--animation);
+}
+
 .placeholder {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
